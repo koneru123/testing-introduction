@@ -3,5 +3,6 @@ describe('firstNonRepeatChar', function() {
     expect(firstNonRepeatChar('abacabad')).to.equal('c');
     expect(firstNonRepeatChar('abaabad')).to.equal('d');
     expect(firstNonRepeatChar('abaaba')).to.equal(null);
+    expect(firstNonRepeatChar('abacabad')).to.not.equal('a');
   });
 });
