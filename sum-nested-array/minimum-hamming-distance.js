@@ -10,7 +10,6 @@ The minimum Hamming Distance is found when the string 'GTA' is compared with the
    GTA
 CC|CTA|GA*/
 
-//Psuedo Code
 /*
 
 // Input is 2 strings
@@ -22,11 +21,17 @@ CC|CTA|GA*/
 //Steps
   1. Create a minimumHammingDistance() function
   2. Pass 2 strings (str1, str2) as arguments to this function
-  3. Create a substitutions variable, assign it to 0 initially
-  4. Check for str1 in string2 using in-built substr method
-  5.
-  return the substitutions variable
-
+  3. Create a distance variable, assign it to 0 initially
+  4. get the length of both the strings and assign them to two different variables
+  5. Case1, if both the strings lengths are equal just do a simple comparison and increment distance if the characters are different
+  6. Case2, if the length is unequal and if string1 length is less than string 2 length
+     - First try to get the last character from string1
+     - Try to look for this character's index in string2 using indexOf
+     - Based on the characters index and characterIndex-(string1.length-1), we get the substring from string2
+     - then we call the main function by passing string1 & substring and try to compare and find the minimum hamming distance
+  7. return the distance variable
+  8. Case 3, if the length is unequal and if string2 length is less than string1 length
+     - Repeat steps 6, 7
 */
 
 var minimumHammingDistance = function(string1, string2) {
